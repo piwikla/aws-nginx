@@ -2,9 +2,6 @@
 
 #https://github.com/piwikla/aws-nginx
 
-#switch to root
-sudo -i
-
 #Update
 apt-get update
 apt-get upgrade
