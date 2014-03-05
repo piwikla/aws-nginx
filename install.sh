@@ -10,7 +10,7 @@ apt-get upgrade
 apt-get install build-essential python-software-properties
 
 #Install PHP
-apt-get install php5-fpm php5-mysql php5-mysqlnd php5-gd php5-memcache memcached php5-curl php5-dev php-pear
+apt-get install php5-fpm php5-gd php5-memcache memcached php5-curl php5-dev php-pear
 
 #Install GeoIP
 apt-get install geoip-bin geoip-database libgeoip-dev
