@@ -47,3 +47,13 @@ mkdir -p /home/piwik/public_html/piwik.la
 
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/piwik.la
 
+sudo nano /etc/php5/fpm/php.ini
+extension=mysqli.so
+service php5-fpm restart
+
+apt-get install phpmyadmin
+sudo ln -s /usr/share/phpmyadmin/ /home/piwik/public_html/piwik.la
+sudo service nginx restart
+
+
+
