@@ -6,6 +6,9 @@
 apt-get update
 apt-get upgrade
 
+#Install unzip
+apt-get install unzip
+
 #Install Dependencies
 apt-get install build-essential python-software-properties
 
