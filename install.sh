@@ -37,12 +37,20 @@ apt-get upgrade
 
 mkdir -p /home/piwik/public_html/piwik.la
 
-service nginx restart
-service php5-fpm restart
+cd /home/piwik/public_html/piwik.la
+
+wget http://piwik.org/latest.zip && unzip latest.zip
+cd piwik
+mv * ../
+cd ../
+rm -rf piwik
 
 cp /etc/nginx/sites-available/default /etc/nginx/sites-available/piwik.la
 ln -s /etc/nginx/sites-available/piwik.la /etc/nginx/sites-enabled
 rm /etc/nginx/sites-enabled/default
+
+service nginx restart
+service php5-fpm restart
 
 
 
