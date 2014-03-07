@@ -17,6 +17,7 @@ apt-get install php5-fpm php5-gd php5-memcache memcached php5-curl php5-dev php-
 
 #Install GeoIP
 apt-get install geoip-bin geoip-database libgeoip-dev
+pecl install geoip
 
 #Install MySQL
 apt-get install mysql-server mysql-client
