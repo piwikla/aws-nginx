@@ -30,3 +30,15 @@ apt-get upgrade
 
 #Start Nginx
 service nginx start
+
+#Start php5-fpm
+service php5-fpm start
+
+nano /etc/nginx/sites-available/default
+nano /etc/php5/fpm/pool.d/www.conf
+nano /etc/nginx/sites-available/piwik.la
+ln -s /etc/nginx/sites-available/piwik.la /etc/nginx/sites-enabled
+rm /etc/nginx/sites-enabled/default
+/etc/init.d/nginx reload
+mkdir -p /home/piwik/public_html/piwik.la
+
