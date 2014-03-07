@@ -21,39 +21,28 @@ apt-get install geoip-bin geoip-database libgeoip-dev
 #Install MySQL
 apt-get install mysql-server mysql-client
 
-#Basic Security
-apt-get install fail2ban iptables-persistent
-
 #Install Nginx
 apt-get install nginx
+
+#Start php5-fpm
+service php5-fpm start
+
+#Install phpmyadmin
+apt-get install phpmyadmin
+sudo ln -s /usr/share/phpmyadmin/ /home/piwik/public_html/piwik.la
 
 #Update
 apt-get update
 apt-get upgrade
 
-#Start Nginx
-service nginx start
-
-#Start php5-fpm
-service php5-fpm start
-
-nano /etc/nginx/sites-available/default
-nano /etc/php5/fpm/pool.d/www.conf
-nano /etc/nginx/sites-available/piwik.la
-ln -s /etc/nginx/sites-available/piwik.la /etc/nginx/sites-enabled
-rm /etc/nginx/sites-enabled/default
-/etc/init.d/nginx reload
 mkdir -p /home/piwik/public_html/piwik.la
 
-sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/piwik.la
-
-sudo nano /etc/php5/fpm/php.ini
-extension=mysqli.so
+service nginx restart
 service php5-fpm restart
 
-apt-get install phpmyadmin
-sudo ln -s /usr/share/phpmyadmin/ /home/piwik/public_html/piwik.la
-sudo service nginx restart
+cp /etc/nginx/sites-available/default /etc/nginx/sites-available/piwik.la
+ln -s /etc/nginx/sites-available/piwik.la /etc/nginx/sites-enabled
+rm /etc/nginx/sites-enabled/default
 
 
 
