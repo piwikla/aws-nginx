@@ -42,3 +42,5 @@ rm /etc/nginx/sites-enabled/default
 /etc/init.d/nginx reload
 mkdir -p /home/piwik/public_html/piwik.la
 
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/piwik.la
+
