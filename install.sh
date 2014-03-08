@@ -5,15 +5,13 @@
 #Update
 apt-get update
 apt-get upgrade
+apt-get remove -y apache2 apache2-doc apache2-utils apache2.2-common apache2.2-bin apache2-mpm-prefork apache2-doc apache2-mpm-worker  
 
 #Install unzip
 apt-get install unzip
 
 #Install Dependencies
 apt-get install build-essential python-software-properties
-
-#Install PHP
-apt-get install php5-fpm php5-mysql php5-gd php5-memcache php5-curl php5-dev php-pear php5-mysqlnd
 
 #Install GeoIP
 apt-get install geoip-bin geoip-database libgeoip-dev
@@ -42,6 +40,9 @@ rm /etc/nginx/sites-enabled/default
 #Install phpmyadmin
 apt-get install phpmyadmin
 sudo ln -s /usr/share/phpmyadmin/ /home/piwik/public_html/piwik.la
+
+#Install PHP
+apt-get install php5-fpm php5-mysql php5-gd php5-memcache php5-curl php5-dev php-pear php5-mysqlnd
 
 #Update
 apt-get update
