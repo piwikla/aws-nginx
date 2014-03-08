@@ -8,17 +8,17 @@ apt-get upgrade
 apt-get remove -y apache2 apache2-doc apache2-utils apache2.2-common apache2.2-bin apache2-mpm-prefork apache2-doc apache2-mpm-worker  
 
 #Install Nginx
-apt-get install nginx
+apt-get install nginx -y
 
 #Install Dependencies
-apt-get install build-essential python-software-properties unzip geoip-bin geoip-database libgeoip-dev
-pecl install geoip
+apt-get install build-essential python-software-properties unzip geoip-bin geoip-database libgeoip-dev -y
+pecl install geoip -y
 
 #Install MySQL
-apt-get install mysql-server mysql-client
+apt-get install mysql-server mysql-client -y
 
 #Install PHP
-apt-get install php5-fpm php5-mysql php5-gd php5-memcache php5-curl php5-dev php-pear php5-mysqlnd
+apt-get install php5-fpm php5-mysql php5-gd php5-memcache php5-curl php5-dev php-pear -y
 
 #Update
 apt-get remove -y apache2 apache2-doc apache2-utils apache2.2-common apache2.2-bin apache2-mpm-prefork apache2-doc apache2-mpm-worker  
