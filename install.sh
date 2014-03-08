@@ -16,7 +16,7 @@ apt-get install unzip
 apt-get install build-essential python-software-properties
 
 #Install PHP
-apt-get install php5 php5-cli php5-fpm php5-mysql php5-gd php5-memcache php5-suhosin php5-curl php5-dev php-pear php5-mysqlnd
+apt-get install php5 php5-cli php5-fpm php5-mysql php5-gd php5-memcache php5-curl php5-dev php-pear php5-mysqlnd
 
 #Install GeoIP
 apt-get install geoip-bin geoip-database libgeoip-dev
@@ -27,10 +27,6 @@ apt-get install mysql-server mysql-client
 
 #Install Nginx
 apt-get install nginx
-
-#Install phpmyadmin
-apt-get install phpmyadmin
-sudo ln -s /usr/share/phpmyadmin/ /home/piwik/public_html/piwik.la
 
 mkdir -p /home/piwik/public_html/piwik.la
 
@@ -45,6 +41,10 @@ rm -rf piwik
 cp /etc/nginx/sites-available/default /etc/nginx/sites-available/piwik.la
 ln -s /etc/nginx/sites-available/piwik.la /etc/nginx/sites-enabled
 rm /etc/nginx/sites-enabled/default
+
+#Install phpmyadmin
+apt-get install phpmyadmin
+sudo ln -s /usr/share/phpmyadmin/ /home/piwik/public_html/piwik.la
 
 #Update
 apt-get update
