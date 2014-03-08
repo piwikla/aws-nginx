@@ -3,9 +3,6 @@
 #https://github.com/piwikla/aws-nginx
 
 #Update
-add-apt-repository ppa:nginx/stable
-add-apt-repository ppa:ondrej/php5
-add-apt-repository ppa:nijel/phpmyadmin
 apt-get update
 apt-get upgrade
 
@@ -16,7 +13,7 @@ apt-get install unzip
 apt-get install build-essential python-software-properties
 
 #Install PHP
-apt-get install php5 php5-cli php5-fpm php5-mysql php5-gd php5-memcache php5-curl php5-dev php-pear php5-mysqlnd
+apt-get install php5-fpm php5-mysql php5-gd php5-memcache php5-curl php5-dev php-pear php5-mysqlnd
 
 #Install GeoIP
 apt-get install geoip-bin geoip-database libgeoip-dev
